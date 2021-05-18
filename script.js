@@ -23,6 +23,7 @@ function setup() {
 
 function arcSpin(w,h,start,stop,s){
     push();
+    stroke(color(255));
     translate(width/2, height/2);
     rotate(s);
     arc(0, 0, w, h, start, stop);
@@ -36,16 +37,10 @@ function populateArcs(x) {
 }
 
 function draw() {
-  background(255);
-  noFill();
+    background(0);
+    noFill();
+    strokeWeight(10);
   populateArcs(spinArr);
-//  arcSpin(50,50,0,30,spin*2);
-//  arcSpin(350,350,60,130,spin*2.3);
-//  arcSpin(400,400,30,330,spin*(-1.8));
-//  arcSpin(450,450,0,30,spin*2.1);
-//  arcSpin(500,500,0,180,spin);
-//  arcSpin(550,550,0,90,spin*(-1));
-//  arcSpin(550,550,0,90,spin*(-1));
   console.log(spinArr)
   spin += 0.1
 // noLoop()
